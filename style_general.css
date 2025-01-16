@@ -1,0 +1,306 @@
+html {
+  overscroll-behavior-y: none;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  background: rgb(1, 0, 5);
+  padding: 0px;
+  margin: 0px;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+* {
+  color: rgb(244, 247, 245);
+  font-family: Roboto;
+}
+
+h1, h2, h3, h4 {
+  font-family: Poppins;
+  font-weight: 200;
+}
+
+h2 {
+  text-align: center;
+}
+
+.tinySpacer {
+  margin: 40vh 0px;
+}
+
+.spacer {
+  margin: 100vh 0px;
+}
+
+.centeringContainer {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fader_bottom, .fader_top, .fader_left, .fader_right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 2;
+  background-image: linear-gradient(to bottom, transparent 60%, rgb(1, 0, 5) 90%);
+}
+
+.fader_left {
+  background-image: linear-gradient(to left, transparent 60%, rgb(1, 0, 5) 90%);
+}
+
+.fader_right {
+  background-image: linear-gradient(to right, transparent 60%, rgb(1, 0, 5) 90%);
+}
+
+.fader_top {
+  background-image: linear-gradient(to top, transparent 60%, rgb(1, 0, 5) 90%);
+}
+
+.preventSelect {
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
+}
+
+.centerContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider, .headerDivider {
+  width: 60vw;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(2, 197, 190, 0), #2a9d99 25%, #7455d5 55%, rgba(94, 43, 255, 0));
+  border-radius: 100%;
+  position: relative;
+  animation: dividerAnim 10s 0s infinite;
+}
+@media (max-width: 768px) {
+  .divider, .headerDivider {
+    width: 80vw;
+  }
+}
+
+.divider::after, .headerDivider::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  border-radius: 100%;
+  background-image: inherit;
+  filter: blur(15px);
+  opacity: 1;
+}
+
+@keyframes dividerAnim {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  30% {
+    filter: hue-rotate(0deg) saturate(1);
+  }
+  50% {
+    filter: hue-rotate(180deg) saturate(0.2);
+  }
+  70% {
+    filter: hue-rotate(360deg) saturate(1);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+@media (min-width: 1024px) {
+  .phoneOnly {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.content {
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.content h1, .content h2, .content h3 {
+  font-family: Poppins;
+  font-weight: 400;
+}
+.content p {
+  padding: 0 10vw;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.25em;
+}
+
+.sectionBreak {
+  margin: 200px 0;
+}
+
+.headerDivider {
+  width: 30vw;
+  margin-left: 35vw;
+}
+
+.textHighlight {
+  color: rgb(158, 102, 255);
+  font-weight: 500;
+  position: relative;
+}
+
+.textHighlight::after {
+  display: block;
+  content: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+}
+
+.quizButton {
+  cursor: pointer;
+  float: right;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1em 2em;
+  border-radius: 1000px;
+  position: relative;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.3em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.5s;
+  box-shadow: 0px 0px 50px 0px rgba(94, 43, 255, 0.9);
+  animation: quizButtonAnim 10s 0s infinite;
+}
+.quizButton .background {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5em;
+  overflow: hidden;
+  color: rgba(1, 0, 5, 0.2);
+  font-family: Poppins;
+  font-weight: 700;
+  z-index: -3;
+  background: linear-gradient(to bottom right, rgb(2, 197, 190) 0%, rgb(94, 43, 255) 100%);
+}
+.quizButton .background::after {
+  content: "";
+  position: absolute;
+  filter: blur(2px);
+  top: 2.5px;
+  bottom: 2.5px;
+  left: 2.5px;
+  right: 2.5px;
+  border-radius: 1000px;
+  background: linear-gradient(to right, rgba(1, 0, 5, 0.1) var(--percentage)-10%, rgba(1, 0, 5, 0.7) var(--percentage), rgba(1, 0, 5, 0.7) var(--percentage));
+  border: 3px solid rgb(1, 0, 5);
+}
+
+.quizButton:hover {
+  transform: scale(1.1);
+  padding: 1em 2.5em;
+  box-shadow: 0px 0px 50px 0px rgba(94, 43, 255, 0.5);
+}
+
+@keyframes quizButtonAnim {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg) saturate(0.2);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.gameButton {
+  cursor: pointer;
+  float: right;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1em 2em;
+  border-radius: 1000px;
+  position: relative;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.3em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin-top: 3em;
+  transition: 0.5s;
+  box-shadow: 0px 0px 50px 0px rgba(94, 43, 255, 0.9);
+  animation: quizButtonAnim 10s 0s infinite;
+}
+.gameButton .background {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5em;
+  overflow: hidden;
+  color: rgba(1, 0, 5, 0.2);
+  font-family: Poppins;
+  font-weight: 700;
+  z-index: -3;
+  background: linear-gradient(to bottom right, rgb(2, 197, 190) 0%, rgb(94, 43, 255) 100%);
+}
+.gameButton .background::after {
+  content: "";
+  position: absolute;
+  filter: blur(2px);
+  top: 2.5px;
+  bottom: 2.5px;
+  left: 2.5px;
+  right: 2.5px;
+  border-radius: 1000px;
+  background: rgba(1, 0, 5, 0.9);
+  border: 3px solid rgb(1, 0, 5);
+}
+
+.gameButton:hover {
+  transform: scale(1.1);
+  padding: 1em 2.5em;
+  box-shadow: 0px 0px 50px 0px rgba(94, 43, 255, 0.5);
+}
+
+.thankYou {
+  margin-bottom: 2em;
+  font-family: Poppins;
+}/*# sourceMappingURL=style_general.css.map */

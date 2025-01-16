@@ -1,0 +1,140 @@
+@import 'variables.scss';
+
+#gameView {
+    width: calc(100vw);
+    height: calc(100vh);
+    position: relative;
+    overflow: hidden;
+}
+
+#ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+}
+
+#gameCanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.gameElement {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rocket {
+    width: 30px;
+    height: 80px;
+    transform: translate(-50%, -50%); /* Center */
+}
+.stage {
+    width: 30px;
+    height: fit-content;
+}
+.capsule {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+
+.fuelTank {
+    width: 100%;
+    height: 50px;
+    background-color: green;
+}
+.thruster {
+    width: 30px;
+    height: 15px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    background-color: purple;
+    transform: scaleX(0.7);
+}
+.planet {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, blue 65%, rgba(0, 0, 255, 0.0) 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+#ui_throttleSlider {
+    position: absolute;
+    right: 10px;
+    width: 25px;
+    height: 90vh;
+    top: 2.5vh;
+    background-color: rgba(red,0.1);
+}
+#ui_throttleSliderFill {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    background-color: rgba(lime, 0.3);
+}
+
+#introPanel {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 100;
+
+    transition: 1s;
+
+    background: radial-gradient(circle, rgba($mainColor, 0.2) 30%, rgba($secondaryColor, 0.2));
+    backdrop-filter: blur(50px);
+
+    @media (max-width: $breakpoint-tablet) {
+        padding: 2em;
+    }
+
+    p {
+        margin-top: 2em;
+        font-family: Roboto;
+        font-weight: 300;
+        font-size: 1.2em;
+    }
+
+    br {
+        margin: 0.2em;
+    }
+    .control {
+        border: 2px solid rgba($panelColor, 0.1);
+        background-color: rgba($bgColor, 0.3);
+        padding: 0.1em 1em;
+        border-radius: 5px;
+    }
+    #closePanel {
+        cursor: pointer;
+        font-size: 1.4em;
+        background-color: rgba($bgColor, 0.4);
+        padding: 0.5em 2em;
+        border-radius: 10px;
+        border: 2px solid rgba($panelColor, 0.3);
+        transition: 0.2s;
+        box-shadow: 0px 0px 10px 0px rgba($bgColor, 0.4);
+    }
+    #closePanel:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 10px 30px 5px rgba($bgColor, 0.3);
+    }
+}
+.hide {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+}

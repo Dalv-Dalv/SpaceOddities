@@ -1,0 +1,232 @@
+@import 'variables.scss';
+
+#curiosities {
+    position: relative;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+    // For mobile, display a horizontal list instead of a grid
+    @media (max-width: $breakpoint-tablet){
+        .scrollContainer {
+            overflow-x: scroll;
+    
+            // Hide scrollbar----
+            ::-webkit-scrollbar{
+                display: none;
+            }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            //----
+        }
+        
+        .container {
+            width: fit-content;
+            display: flex;
+            justify-content: stretch;
+            padding: 30px 10vw;
+            gap: 10vw;
+        }
+    }
+
+    
+    .container {
+        /* #region Adjust SVG thumbnails to fit properly and have consistent thickness */
+        #card_exploration .thumbnail {
+            height: 100%;
+            svg {
+                height: 100%;
+            }
+        }
+        
+        .card:not(#card_exploration) .thumbnail {
+            width: 100%;
+            svg {
+                width: 100%;
+            }
+        }
+        #card_exploration {stroke-width: 0.6px;}
+        #card_universe {stroke-width: 5px;}
+        #card_galaxies .thumbnail {stroke-width: 5px;}
+        #card_stars {stroke-width: 10px;}
+        #card_planets {stroke-width: 0.6px;}
+        /* #endregion */
+
+        .card {
+            border: 3px solid rgba($panelColor, 0.7);
+    
+            border-radius: 5px;
+            box-shadow: 0px 0px 100px 10px rgba($secondaryColor, 0.5);
+            position: relative;
+            h3{
+                text-align: center;
+                letter-spacing: 0.3em;
+                font-weight: 300;
+                z-index: 100;
+            }
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .thumbnail {
+                transition: 0.6s;
+                position: absolute;
+            }
+            cursor:pointer;
+
+            transition: 0.6s;
+            stroke: $panelColor;
+            fill: $panelColor;
+            backdrop-filter: blur(0px);
+
+            .dropper {
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                z-index: 2;
+                transition: 1s;
+                display: grid;
+
+                h3 {
+                    display: block;
+                    text-align: center;
+                    margin: auto;
+                    text-shadow: 0px 0px 15px black;
+                    font-weight: 500;
+                }
+            }
+            .dropper:hover{
+                backdrop-filter: blur(5px);
+            }
+        }
+
+        // For tablet and desktop display grid; adjust color gradients for each and the hover transition
+        @media (min-width: $breakpoint-tablet){
+            #card_exploration .dropper{
+                grid-template-rows: 1fr 1fr;
+                background-image: linear-gradient(to bottom, $secondaryColor, transparent);
+                top: -100%;
+            }
+            #card_exploration .dropper:hover{
+                top:0%;
+            }
+            
+            .card:not(#card_exploration) .dropper{
+                grid-template-columns: 1fr 1fr;
+            }
+            .card:not(#card_exploration, #card_stars, #card_planets) .dropper{
+                background-image: linear-gradient(to right, $mainColor, transparent 80%, rgba($secondaryColor, 0.5));
+                left: -100%;
+            }
+            .card:not(#card_exploration, #card_planets) .dropper:hover{
+                left: 0%;
+            }
+
+            #card_stars .dropper{
+                background-image: linear-gradient(to right, $mainColor, transparent);
+                left: -100%;
+            }
+            #card_planets .dropper{
+                background-image: linear-gradient(to right, transparent, $secondaryColor);
+                right: -100%;
+    
+                h3 {
+                    grid-column-start: 2;
+                }
+            }   
+            #card_planets .dropper:hover{
+                right: 0%;
+            }
+        }
+
+        // For phones color all the cards the same
+        @media (max-width: $breakpoint-tablet){
+            .card .dropper {
+                background-image: linear-gradient(to bottom, rgba($secondaryColor, 0.9), rgba($secondaryColor, 0.2));
+            }
+        }
+
+        .card:hover{
+            transform: scale(1.05);
+
+            .thumbnail {
+                transform: scale(1.1);
+            }
+        }
+
+        .card .dropper::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            background-color: rgba(black, 0.3);
+            filter: blur(30px);
+        }
+
+        // For tablets and desktop use grid layout
+        @media (min-width: $breakpoint-tablet){
+            padding: 0 10vw;
+            display: grid;
+            grid-template: 
+                "u u e"
+                "g g e"
+                "s p e";
+            .card {
+                height: auto;
+                width: auto;
+                margin: min(1vh, 1vw);
+                padding: min(12vh, 10vw);
+            }
+            #card_universe{
+                grid-area: u;
+            }
+            #card_galaxies {
+                grid-area: g;
+            }
+            #card_stars {
+                grid-area: s;
+            }
+            #card_planets {
+                grid-area: p;
+            }
+            #card_exploration {
+                grid-area: e;
+            }
+        }
+        // For phones
+        @media (max-width: $breakpoint-tablet){
+            .card{
+                height: min(400px, 80vh);
+                width: 76vw;
+                margin: 10vh 0;
+                
+                h3 {
+                    font-size: min(7vw, 7vh);
+                    
+                }
+            }
+        }
+    }
+
+    .fader {
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        
+        background-image: linear-gradient(to right, $bgColor, transparent 5%, transparent 95%, $bgColor);
+        @media (max-width: $breakpoint-tablet){
+            $transparency: 0.1;
+            background-image: linear-gradient(to right, rgba($bgColor, $transparency), transparent 50%, rgba($bgColor, $transparency));
+        }
+
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Ghita Vladut">
+    <meta name="description" content="A brief overview of the most interesting space related knowledge">
+    <meta name="keywords" content="Space, Moon, Earth, Sun, Mars, Rocket, NASA">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style_general.css" type="text/css">
+    <link rel="stylesheet" href="style_orbitgame.css" type="text/css">
+
+    <script type="text/javascript" src="orbitGame.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Explorare</title>
+</head>
+
+<body>
+    <div id="gameView">
+        <div id="ui">
+            <div id="ui_throttleSlider">
+                <div id="ui_throttleSliderFill"></div>
+            </div>
+            <div id="distanceToNearestPlanet">
+                Distance to nearest planet: 100
+            </div>
+            <div id="timeScale">
+                Timescale: 1x
+            </div>
+        </div>
+        
+        <div id="introPanel" class="">
+            <h1>Welcome to the Gravity Simulator™</h1>
+            <div class="divider"></div>
+            <p>You can experiment however you like here; if you don't know what to do, 
+                here's an objective for you: reach a stable circular orbit around the moon</p>
+            <p>Simulation controls: <br>
+                <span class="control">Mouse</span> - zoom and pan <br>
+                <span class="control">Left/right arrows</span> - Rotate ship <br>
+                <span class="control">Up/down arrows</span> - Increase/decrease throttle <br>
+                <span class="control">P, R, I, O, N</span> - Point ship prograde, retrograde, radial in, radial out, and manual controls <br>
+                <span class="control">, and .</span> - Slow down and speed up time
+
+            </p>
+            <div class="preventSelect" id="closePanel">Close panel</div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+</body>
+
+</html>

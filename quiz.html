@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Ghita Vladut">
+    <meta name="description" content="A brief overview of the most interesting space related knowledge">
+    <meta name="keywords" content="Space, Moon, Earth, Sun, Mars, Rocket, NASA">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style_general.css" type="text/css">
+    <link rel="stylesheet" href="style_quiz.css" type="text/css">
+
+    <script type="text/javascript" src="quiz.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Space Quiz</title>
+</head>
+
+<body>
+    <div id="quizFinishedPanel" class="preventSelect">
+        <h1 id="finishTitle">Quiz Finished!</h1>
+        <div class="divider"></div>
+        <h2 id="finishMessage">Congratulations! You got all of them right!</h2>
+        <h2 id="score" result="low">100%</h2>
+        <a href="" id="backButton" >Back to main</a>
+        <a href="" id="tryAgainButton">Try Again</a>
+    </div>
+    <form id="quizForm">
+        <fieldset>
+            <div class="centerContent onTop">
+                <!-- <a href="index.html" id="backButton" class="preventSelect">Back to main Article</a> -->
+                <legend id="quizTitle" class="preventSelect"></legend>
+                <div class="divider"></div>
+                <div id="questionNumberContainer">
+                    <span id="correctQuestions">3</span><span id="remainingQuestions">10</span><span id="wrongQuestions">1</span>
+                </div>
+            </div>
+
+            <div id="viewport">
+                <div class="lightBackground"></div>
+                <div id="questionsContainer">
+                    
+                </div>
+                <div class="quizFader"></div>
+            </div>
+        </fieldset>
+        <template id="questionTemplate">
+            <div class="question">
+                <h2 class="questionTitle">What is the answer?</h2>
+                <div class="answerList">
+                    <label for="answer1" class="container">
+                        <input type="radio" class="answer" name="q1" id="answer1" value="0">
+                        <span class="rb0 radioButton"></span>
+                    </label>
+                    <label for="answer2" class="container">
+                        <input type="radio" class="answer" name="q1" id="answer2" value="1">
+                        <span class="rb1 radioButton"></span>
+                    </label>
+                    <label for="answer3" class="container">
+                        <input type="radio" class="answer" name="q1" id="answer3" value="2">
+                        <span class="rb2 radioButton"></span>
+                    </label>
+                    <label for="answer4" class="container">
+                        <input type="radio" class="answer" name="q1" id="answer4" value="3">
+                        <span class="rb3 radioButton"></span>
+                    </label>
+                </div>
+            </div>
+        </template>
+    </form>
+</body>
+
+</html>

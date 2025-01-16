@@ -1,0 +1,211 @@
+#curiosities {
+  position: relative;
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
+}
+@media (max-width: 1024px) {
+  #curiosities .scrollContainer {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  #curiosities .scrollContainer ::-webkit-scrollbar {
+    display: none;
+  }
+  #curiosities .container {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: stretch;
+    padding: 30px 10vw;
+    gap: 10vw;
+  }
+}
+#curiosities .container {
+  /* #region Adjust SVG thumbnails to fit properly and have consistent thickness */
+  /* #endregion */
+}
+#curiosities .container #card_exploration .thumbnail {
+  height: 100%;
+}
+#curiosities .container #card_exploration .thumbnail svg {
+  height: 100%;
+}
+#curiosities .container .card:not(#card_exploration) .thumbnail {
+  width: 100%;
+}
+#curiosities .container .card:not(#card_exploration) .thumbnail svg {
+  width: 100%;
+}
+#curiosities .container #card_exploration {
+  stroke-width: 0.6px;
+}
+#curiosities .container #card_universe {
+  stroke-width: 5px;
+}
+#curiosities .container #card_galaxies .thumbnail {
+  stroke-width: 5px;
+}
+#curiosities .container #card_stars {
+  stroke-width: 10px;
+}
+#curiosities .container #card_planets {
+  stroke-width: 0.6px;
+}
+#curiosities .container .card {
+  border: 3px solid rgba(203, 199, 209, 0.7);
+  border-radius: 5px;
+  box-shadow: 0px 0px 100px 10px rgba(94, 43, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.6s;
+  stroke: rgb(203, 199, 209);
+  fill: rgb(203, 199, 209);
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+}
+#curiosities .container .card h3 {
+  text-align: center;
+  letter-spacing: 0.3em;
+  font-weight: 300;
+  z-index: 100;
+}
+#curiosities .container .card .thumbnail {
+  transition: 0.6s;
+  position: absolute;
+}
+#curiosities .container .card .dropper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: 1s;
+  display: grid;
+}
+#curiosities .container .card .dropper h3 {
+  display: block;
+  text-align: center;
+  margin: auto;
+  text-shadow: 0px 0px 15px black;
+  font-weight: 500;
+}
+#curiosities .container .card .dropper:hover {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+@media (min-width: 1024px) {
+  #curiosities .container #card_exploration .dropper {
+    grid-template-rows: 1fr 1fr;
+    background-image: linear-gradient(to bottom, rgb(94, 43, 255), transparent);
+    top: -100%;
+  }
+  #curiosities .container #card_exploration .dropper:hover {
+    top: 0%;
+  }
+  #curiosities .container .card:not(#card_exploration) .dropper {
+    grid-template-columns: 1fr 1fr;
+  }
+  #curiosities .container .card:not(#card_exploration, #card_stars, #card_planets) .dropper {
+    background-image: linear-gradient(to right, rgb(2, 197, 190), transparent 80%, rgba(94, 43, 255, 0.5));
+    left: -100%;
+  }
+  #curiosities .container .card:not(#card_exploration, #card_planets) .dropper:hover {
+    left: 0%;
+  }
+  #curiosities .container #card_stars .dropper {
+    background-image: linear-gradient(to right, rgb(2, 197, 190), transparent);
+    left: -100%;
+  }
+  #curiosities .container #card_planets .dropper {
+    background-image: linear-gradient(to right, transparent, rgb(94, 43, 255));
+    right: -100%;
+  }
+  #curiosities .container #card_planets .dropper h3 {
+    grid-column-start: 2;
+  }
+  #curiosities .container #card_planets .dropper:hover {
+    right: 0%;
+  }
+}
+@media (max-width: 1024px) {
+  #curiosities .container .card .dropper {
+    background-image: linear-gradient(to bottom, rgba(94, 43, 255, 0.9), rgba(94, 43, 255, 0.2));
+  }
+}
+#curiosities .container .card:hover {
+  transform: scale(1.05);
+}
+#curiosities .container .card:hover .thumbnail {
+  transform: scale(1.1);
+}
+#curiosities .container .card .dropper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  filter: blur(30px);
+}
+@media (min-width: 1024px) {
+  #curiosities .container {
+    padding: 0 10vw;
+    display: grid;
+    grid-template: "u u e" "g g e" "s p e";
+  }
+  #curiosities .container .card {
+    height: auto;
+    width: auto;
+    margin: min(1vh, 1vw);
+    padding: min(12vh, 10vw);
+  }
+  #curiosities .container #card_universe {
+    grid-area: u;
+  }
+  #curiosities .container #card_galaxies {
+    grid-area: g;
+  }
+  #curiosities .container #card_stars {
+    grid-area: s;
+  }
+  #curiosities .container #card_planets {
+    grid-area: p;
+  }
+  #curiosities .container #card_exploration {
+    grid-area: e;
+  }
+}
+@media (max-width: 1024px) {
+  #curiosities .container .card {
+    height: min(400px, 80vh);
+    width: 76vw;
+    margin: 10vh 0;
+  }
+  #curiosities .container .card h3 {
+    font-size: min(7vw, 7vh);
+  }
+}
+#curiosities .fader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-image: linear-gradient(to right, rgb(1, 0, 5), transparent 5%, transparent 95%, rgb(1, 0, 5));
+  pointer-events: none;
+}
+@media (max-width: 1024px) {
+  #curiosities .fader {
+    background-image: linear-gradient(to right, rgba(1, 0, 5, 0.1), transparent 50%, rgba(1, 0, 5, 0.1));
+  }
+}/*# sourceMappingURL=style_curiosities.css.map */

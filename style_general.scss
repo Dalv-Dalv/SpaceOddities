@@ -1,0 +1,344 @@
+@import 'variables.scss';
+
+// Overscroll fix
+html {
+    overscroll-behavior-y:none;
+}
+
+html, body {
+    width: 100%;
+}
+
+// Background color
+body {
+    background: $bgColor;
+    padding: 0px;
+    margin: 0px;
+}
+
+// html, body { // Snapping scroll
+//     scroll-snap-type: y proximity;
+//     scroll-behavior: smooth;
+// }
+section {
+    scroll-snap-align: start;
+}
+
+* {
+    color: $textColor;
+    font-family: Roboto;
+}
+
+h1, h2, h3, h4 {
+    font-family: Poppins;
+    font-weight: 200;
+}
+
+h2 {
+    text-align: center;
+}
+
+.tinySpacer {
+    margin: 40vh 0px;
+}
+
+.spacer {
+    margin: 100vh 0px;
+}
+
+.centeringContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fader_bottom, .fader_top, .fader_left, .fader_right {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    pointer-events: none;
+    z-index: 2;
+    background-image: linear-gradient(to bottom, transparent 60%, $bgColor 90%);
+}
+.fader_left {
+    background-image: linear-gradient(to left, transparent 60%, $bgColor 90%);
+}
+.fader_right {
+    background-image: linear-gradient(to right, transparent 60%, $bgColor 90%);
+}
+.fader_top {
+    background-image: linear-gradient(to top, transparent 60%, $bgColor 90%);
+}
+
+.preventSelect {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.centerContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.divider, .headerDivider {
+    @media (max-width: $breakpoint-mobile){
+        width: 80vw;
+    }
+
+    width: 60vw;
+    height: 1px;
+    background-image: linear-gradient(to right, 
+        rgba($mainColor, 0),
+        desaturate($mainColor, 40%) 25%, 
+        desaturate($secondaryColor, 40%) 55%,
+        rgba($secondaryColor, 0)
+    );
+
+    border-radius: 100%;
+
+    position: relative;
+
+    animation: dividerAnim 10s 0s infinite;
+}
+
+.divider::after, .headerDivider::after{
+    content: "";
+    position: absolute;
+
+    $size: 3px;
+
+    top: -$size;
+    bottom: -$size;
+    left: 0;
+    right: 0;
+    border-radius: 100%;
+    background-image: inherit;
+    filter: blur(15px);
+    opacity: 1.0;
+}
+
+@keyframes dividerAnim {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    30% {
+        filter: hue-rotate(0deg) saturate(1.0);
+    }
+    50% {
+        filter: hue-rotate(180deg) saturate(0.2);
+    }
+    70% {
+        filter: hue-rotate(360deg) saturate(1.0);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.phoneOnly{
+    @media (min-width: $breakpoint-tablet){
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.content {
+    h1, h2, h3 {
+        font-family: Poppins;
+        font-weight: 400;
+    }
+
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.2rem;
+
+    p {
+        padding: 0 10vw;     
+        font-weight: 300;   
+        letter-spacing: 0.05em;
+        line-height: 1.25em;
+    }
+}
+
+.sectionBreak {
+    margin: 200px 0;
+}
+
+.headerDivider {
+    width: 30vw;
+    margin-left: calc((100vw - 30vw) / 2);
+}
+
+.textHighlight {
+    color: $highlightColor;
+    font-weight: 500;
+    position: relative;
+}
+.textHighlight::after{
+    display: block;
+    content: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+}
+
+.quizButton {
+    cursor: pointer;
+
+    float: right;
+    width: fit-content;
+    padding: 1em 2em;
+    border-radius: 1000px;
+    position: relative;
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.3em;
+    user-select: none;
+
+    transition: 0.5s;
+
+    box-shadow: 0px 0px 50px 0px rgba($color: $secondaryColor, $alpha: 0.9);
+
+    animation: quizButtonAnim 10s 0s infinite;
+    .background {
+        position: absolute;
+    
+        $size: 0px;
+    
+        top: $size;
+        bottom: $size;
+        left: $size;
+        right: $size;
+        border-radius: 1000px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3.5em;
+        overflow: hidden;
+        color: rgba($color: $bgColor, $alpha: 0.2);
+        font-family: Poppins;
+        font-weight: 700;
+    
+        z-index: -3;
+    
+        background: linear-gradient(to bottom right, $mainColor 0%, $secondaryColor 100%);
+    }
+    .background::after {
+        content: "";
+        position: absolute;
+    
+        $size: 2.5px;
+        filter: blur(2px);
+    
+        top: $size;
+        bottom: $size;
+        left: $size;
+        right: $size;
+        border-radius: 1000px;
+    
+        $percentage: 50%;
+        background: linear-gradient(to right, rgba($bgColor, 0.1) (var(--percentage) - 10%), rgba($bgColor, 0.7) var(--percentage), rgba($bgColor, 0.7) var(--percentage));
+        border: 3px solid $bgColor;
+    }
+}
+.quizButton:hover {
+    transform: scale(1.1);
+    padding: 1em 2.5em;
+    box-shadow: 0px 0px 50px 0px rgba($color: $secondaryColor, $alpha: 0.5);
+}
+
+@keyframes quizButtonAnim {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(180deg) saturate(0.2);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.gameButton {
+    cursor: pointer;
+
+    float: right;
+    width: fit-content;
+    padding: 1em 2em;
+    border-radius: 1000px;
+    position: relative;
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.3em;
+    user-select: none;
+
+    margin-top: 3em;
+    
+    transition: 0.5s;
+
+    box-shadow: 0px 0px 50px 0px rgba($color: $secondaryColor, $alpha: 0.9);
+
+    animation: quizButtonAnim 10s 0s infinite;
+    .background {
+        position: absolute;
+    
+        $size: 0px;
+    
+        top: $size;
+        bottom: $size;
+        left: $size;
+        right: $size;
+        border-radius: 1000px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3.5em;
+        overflow: hidden;
+        color: rgba($color: $bgColor, $alpha: 0.2);
+        font-family: Poppins;
+        font-weight: 700;
+    
+        z-index: -3;
+    
+        background: linear-gradient(to bottom right, $mainColor 0%, $secondaryColor 100%);
+    }
+    .background::after {
+        content: "";
+        position: absolute;
+    
+        $size: 2.5px;
+        filter: blur(2px);
+    
+        top: $size;
+        bottom: $size;
+        left: $size;
+        right: $size;
+        border-radius: 1000px;
+    
+        $percentage: 50%;
+        background: rgba($bgColor, 0.9);
+        border: 3px solid $bgColor;
+    }   
+}
+.gameButton:hover{
+    transform: scale(1.1);
+    padding: 1em 2.5em;
+    box-shadow: 0px 0px 50px 0px rgba($color: $secondaryColor, $alpha: 0.5);
+}
+
+.thankYou {
+    margin-bottom: 2em;
+    font-family: Poppins;
+}

@@ -1,0 +1,67 @@
+.quizzButton {
+  cursor: pointer;
+  float: right;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1em 2em;
+  border-radius: 1000px;
+  position: relative;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.3em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.5s;
+  box-shadow: 0px 0px 30px 0px rgba(94, 43, 255, 0.5);
+  animation: quizzButtonAnim 10s 0s infinite;
+}
+
+.quizzButton .background {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5em;
+  overflow: hidden;
+  color: rgba(1, 0, 5, 0.2);
+  font-family: Poppins;
+  font-weight: 700;
+  z-index: -3;
+  background: linear-gradient(to bottom right, #02C3BD 0%, #5E2BFF 100%);
+}
+
+.quizzButton .background::after {
+  content: "";
+  position: absolute;
+  filter: blur(2px);
+  top: 2.5px;
+  bottom: 2.5px;
+  left: 2.5px;
+  right: 2.5px;
+  border-radius: 1000px;
+  background: linear-gradient(to right, rgba(1, 0, 5, 0.1) var(--percentage)-10%, rgba(1, 0, 5, 0.7) var(--percentage), rgba(1, 0, 5, 0.7) var(--percentage));
+  border: 3px solid hsl(250, 90%, 1%);
+}
+
+.quizzButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 50px 0px rgba(94, 43, 255, 0.5);
+}
+
+@keyframes quizzButtonAnim {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg) saturate(0.2);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}/*# sourceMappingURL=style_quizz.css.map */

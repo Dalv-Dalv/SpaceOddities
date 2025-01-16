@@ -1,0 +1,233 @@
+.heroSection {
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 120vh;
+  background-color: black;
+  overflow: hidden;
+}
+.heroSection .thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  stroke: rgba(94, 43, 255, 0.2);
+  stroke-width: 5px;
+  animation-name: thumbnailHueShift;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+.heroSection .titleWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heroSection .titleWrapper h1 {
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
+  display: block;
+  position: sticky;
+  top: 23vh;
+  transform: translateY(-10vh);
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  text-shadow: 0px 2px 10px black;
+}
+@media (max-width: 1024px) {
+  .heroSection .titleWrapper h1 {
+    font-size: 9vw;
+    transform: translateY(-15vh);
+  }
+}
+
+#s_planets .thumbnail {
+  stroke-width: 1px;
+  animation: none;
+  stroke: hsl(255, 90%, 10%);
+}
+
+#s_exploration .thumbnail {
+  stroke-width: 1px;
+  animation: none;
+  stroke: hsl(255, 90%, 10%);
+}
+
+.glslCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.callToAction {
+  position: absolute;
+  bottom: 25vh;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 1px rgb(244, 247, 245) inset;
+  z-index: 3;
+  animation-name: heroCTA;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@media (max-width: 1024px) {
+  .callToAction {
+    bottom: 40vh;
+  }
+}
+
+.callToAction::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 1px rgb(244, 247, 245);
+  animation-name: heroCTA_Before;
+  animation-duration: 2s;
+  animation-delay: 0.1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes thumbnailHueShift {
+  0% {
+    stroke: rgba(94, 43, 255, 0.2);
+  }
+  50% {
+    stroke: rgba(2, 197, 190, 0.1);
+  }
+  100% {
+    stroke: rgba(94, 43, 255, 0.2);
+  }
+}
+@keyframes heroCTA {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+    border-width: 0px;
+    scale: 1 1;
+  }
+  40% {
+    opacity: 1;
+    scale: 0.95 1;
+    transform: translateY(-15px);
+    border-width: 5px;
+  }
+  50% {
+    opacity: 1;
+    scale: 1 1;
+    transform: translateY(-15px);
+    border-width: 5px;
+  }
+  80% {
+    opacity: 0;
+    scale: 1 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    scale: 1 1;
+    transform: translateY(0);
+  }
+}
+@keyframes heroCTA_Before {
+  0% {
+    transform: translateY(0);
+    scale: 1 1;
+  }
+  40% {
+    scale: 0.95 1;
+    transform: translateY(-15px);
+  }
+  50% {
+    scale: 1 1;
+    transform: translateY(-15px);
+  }
+  100% {
+    scale: 1 1;
+    transform: translateY(0);
+  }
+}
+.quote {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  justify-content: center;
+  font-weight: 100;
+  font-size: 1.8em;
+}
+.quote q {
+  font-family: Roboto;
+  font-weight: 200;
+  font-style: italic;
+  padding: 0 2em;
+}
+.quote p {
+  font-family: Roboto;
+  font-weight: 200;
+  font-size: 0.6em;
+  color: var(--accentColor);
+  margin-top: 0;
+}
+
+article .heroSection {
+  height: 160vh;
+}
+article h1 {
+  top: 90vh;
+}
+
+#sun_image {
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  #sun_image {
+    height: 100vh;
+  }
+}
+@media (min-width: 1024px) {
+  #sun_image {
+    width: 100%;
+  }
+}
+
+#sun_image_container {
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+  margin: 20vh 0;
+}
+
+#sun_image_container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgb(1, 0, 5), transparent 10%, transparent 90%, rgb(1, 0, 5));
+}/*# sourceMappingURL=style_heropage.css.map */

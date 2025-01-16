@@ -1,0 +1,86 @@
+{
+    "title": "Galaxy Quiz",
+    
+    "questions": [
+        {
+            "question": "What is the closest star to Earth?",
+            "options": [
+                "Proxima Centauri",
+                "Alpha Centauri",
+                "Sirius",
+                "The Sun"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "What is the most common type of star in the Milky Way?",
+            "options": [
+                "Red dwarf",
+                "Yellow dwarf",
+                "Blue giant",
+                "White dwarf"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "What is the primary element that stars are made of?",
+            "options": [
+                "Helium",
+                "Oxygen",
+                "Hydrogen",
+                "Carbon"
+            ],
+            "answer": "2"
+        },
+        {
+            "question": "What is the surface temperature of the Sun?",
+            "options": [
+                "5,500°C",
+                "3,000°C",
+                "10,000°C",
+                "15,000°C"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "What is the process that powers stars, including our Sun?",
+            "options": [
+                "Nuclear fission",
+                "Nuclear fusion",
+                "Chemical combustion",
+                "Gravitational contraction"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "What is the lifespan of the Sun?",
+            "options": [
+            "10 million years",
+            "1 billion years",
+            "10 billion years",
+            "100 billion years"
+            ],
+            "answer": "2"
+        },
+        {
+            "question": "What is the next stage of the Sun's life cycle?",
+            "options": [
+            "Red giant",
+            "White dwarf",
+            "Supernova",
+            "Black hole"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "What is the name of the outermost layer of the Sun?",
+            "options": [
+            "Photosphere",
+            "Chromosphere",
+            "Corona",
+            "Core"
+            ],
+            "answer": "2"
+        }
+    ]
+}

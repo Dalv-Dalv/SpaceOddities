@@ -1,0 +1,96 @@
+{
+    "title": "Galaxy Quiz",
+    
+    "questions": [
+        {
+            "question": "What technology is primarily used to observe distant galaxies?",
+            "options": [
+                "Microscopes",
+                "Telescopes",
+                "Satellites",
+                "Rovers"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "Which spacecraft was the first to land on the moon?",
+            "options": [
+                "Apollo 11",
+                "Voyager 1",
+                "Hubble",
+                "Curiosity"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "What is the main purpose of the Hubble Space Telescope?",
+            "options": [
+                "To observe Earth",
+                "To observe distant stars and galaxies",
+                "To communicate with satellites",
+                "To monitor weather patterns"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "What is the name of the first artificial satellite launched into space?",
+            "options": [
+                "Sputnik 1",
+                "Explorer 1",
+                "Voyager 1",
+                "Hubble"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "What is the term for the path an object takes as it revolves around another object in space?",
+            "options": [
+                "Rotation",
+                "Orbit",
+                "Revolution",
+                "Trajectory"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "What is the most efficient orbital transfer technique for moving between two orbits?",
+            "options": [
+            "Bi-elliptic transfer",
+            "Hohmann transfer",
+            "Gravity assist",
+            "Rendezvous"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "Which type of thruster is most efficient for long-duration space travel?",
+            "options": [
+            "Chemical thrusters",
+            "Ion thrusters",
+            "Solid rocket boosters",
+            "Cold gas thrusters"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "What technique uses the gravity of a planet to change the path and speed of a spacecraft?",
+            "options": [
+            "Hohmann transfer",
+            "Gravity assist",
+            "Aerobraking",
+            "Orbital insertion"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "Which thruster type is typically used for maneuvering within the Earth's atmosphere?",
+            "options": [
+            "Ion thrusters",
+            "Chemical thrusters",
+            "Nuclear thermal rockets",
+            "Electric propulsion"
+            ],
+            "answer": "1"
+        }
+    ]
+}

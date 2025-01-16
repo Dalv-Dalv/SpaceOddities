@@ -1,0 +1,66 @@
+{
+    "title": "Galaxy Quiz",
+    
+    "questions": [
+        {
+            "question": "What is the name of our galaxy?",
+            "options": [
+                "Andromeda",
+                "Milky Way",
+                "Triangulum",
+                "Whirlpool"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "Approximately how many stars are in the Milky Way galaxy?",
+            "options": [
+                "100 million",
+                "1 billion",
+                "100 billion",
+                "1 trillion"
+            ],
+            "answer": "2"
+        },
+        {
+            "question": "What type of galaxy is the Milky Way?",
+            "options": [
+                "Elliptical",
+                "Irregular",
+                "Spiral",
+                "Lenticular"
+            ],
+            "answer": "2"
+        },
+        {
+            "question": "What is the closest galaxy to the Milky Way?",
+            "options": [
+                "Andromeda",
+                "Triangulum",
+                "Large Magellanic Cloud",
+                "Small Magellanic Cloud"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "What is the largest type of galaxy in the universe?",
+            "options": [
+            "Elliptical",
+            "Spiral",
+            "Irregular",
+            "Lenticular"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "What is the name of the supermassive black hole at the center of the Milky Way?",
+            "options": [
+            "Cygnus X-1",
+            "Sagittarius A*",
+            "M87*",
+            "Andromeda A"
+            ],
+            "answer": "1"
+        }
+    ]
+}

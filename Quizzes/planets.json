@@ -1,0 +1,106 @@
+{
+    "title": "Galaxy Quiz",
+    
+    "questions": [
+        {
+            "question": "Which planet is known as the Red Planet?",
+            "options": [
+                "Earth",
+                "Mars",
+                "Jupiter",
+                "Saturn"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "Which planet is the largest in our solar system?",
+            "options": [
+                "Earth",
+                "Mars",
+                "Jupiter",
+                "Saturn"
+            ],
+            "answer": "2"
+        },
+        {
+            "question": "Which planet is known for its rings?",
+            "options": [
+                "Earth",
+                "Mars",
+                "Jupiter",
+                "Saturn"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "Which planet is closest to the Sun?",
+            "options": [
+                "Earth",
+                "Mercury",
+                "Venus",
+                "Mars"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "Which planet is known as the Earth's twin?",
+            "options": [
+                "Mars",
+                "Venus",
+                "Jupiter",
+                "Saturn"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "What is the third planet from the Sun?",
+            "options": [
+                "Earth",
+                "Mars",
+                "Jupiter",
+                "Saturn"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "What is the name of the largest volcano on Mars?",
+            "options": [
+                "Mount Everest",
+                "Mauna Kea",
+                "Olympus Mons",
+                "Mount Kilimanjaro"
+            ],
+            "answer": "2"
+        },
+        {
+            "question": "Which planet has the most moons?",
+            "options": [
+                "Earth",
+                "Mars",
+                "Jupiter",
+                "Saturn"
+            ],
+            "answer": "2"
+        },
+        {
+            "question": "Which planet is known as the closest exoplanet to Earth?",
+            "options": [
+            "Proxima Centauri b",
+            "Kepler-452b",
+            "TRAPPIST-1d",
+            "Gliese 581g"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "Which exoplanet is known as the first potentially habitable Earth-sized planet discovered?",
+            "options": [
+            "Proxima Centauri b",
+            "Kepler-186f",
+            "TRAPPIST-1e",
+            "Gliese 667Cc"
+            ],
+            "answer": "1"
+        }
+    ]
+}
