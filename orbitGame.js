@@ -173,7 +173,7 @@ var canvas = {
 
         this.ctx.save();
         var predictionPoints = simulateAhead(0.694, 5000, 30);
-        this.ctx.strokeStyle = "rgba(255,220,0, 0.3)";
+        this.ctx.strokeStyle = "rgba(255,220,0, 0.5)";
         this.ctx.lineWidth = 2 * invZoom;
         path = new Path2D();
         path.moveTo(player.posX + 25, player.posY + 25);
@@ -221,7 +221,11 @@ function main() {
     var closePanel =  document.getElementById("closePanel");
     closePanel.onclick = () => {
         requestAnimationFrame(gameLoop);
-        document.getElementById("introPanel").classList.add("hide");
+        
+        var panel = document.getElementById("introPanel");
+        panel.classList.add("hide");
+        
+        setTimeout(() => {panel.style.display = "none";}, 1000);
     };
 
     document.body.onkeydown = handlePlayerInputsDown;
@@ -313,6 +317,14 @@ function gameLoop(timestamp) {
     requestAnimationFrame(gameLoop);
 }
 
+function reset() {
+    player.posX = planets[0].x;
+    player.posY = planets[0].y + 100;
+
+    player.speedX = 0.825;
+    player.speedY = 0;
+}
+
 function handlePlayerInputsDown(event) {
     switch(event.key){
         case "ArrowUp":
@@ -357,6 +369,9 @@ function handlePlayerInputsDown(event) {
             break;
         case ",":
             timescale /= 2;
+            break;
+        case "h":
+            reset();
             break;
         default:
             break;
