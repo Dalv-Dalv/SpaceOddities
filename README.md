@@ -1,3 +1,2 @@
-<h1> hi </h1>
-Hello
-<h2> hi </h2>
+<h1> Space Oddities </h1>
+<h2> University of Bucharest | Web Course Project </h2>
