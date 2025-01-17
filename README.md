@@ -1,4 +1,4 @@
-<h1> Space Oddities </h1>
+# Space Oddities
 University of Bucharest | Web Course Project
 
 This website features a fully responsive design, it implements GLSL shaders as hero screens. The page is meant to read like an article to discover interesting things about space.
@@ -10,17 +10,16 @@ On the final section of the article, there is a small gravity simulation game wh
 
 
 
-Requirements and implementations:
-Cerinte HTML/CSS:
-- WORK IN PROGRESS
+# Requirements and implementations:
+## Cerinte HTML/CSS:
 - [X] Fisiere separate pentru HTML si CSS
 - [X] Conținutul site-ului trebuie să aibă sens (nu îl umpleți cu Lorem ipsum)
 - [X] Nu este acceptată folosirea de frameworkuri și biblioteci
-HTML:
+### HTML:
 - [ ] Trecerea testelor de validare HTML http://validator.w3.org/
     -  Multe erori de la SVG
 - [X] Folosirea tagurilor semantice prezentate la curs/laborator
-CSS:
+### CSS:
 - [X] Trecerea testelor de validare CSS https://jigsaw.w3.org/css-validator/
 - [X] Folosirea selectorilor CSS de bază (după id, clasă, tag, elementContinut, elementCopil, al n-lea copil de tipul unui tag :nth-of-type)
 - [X] Specificarea proprietăților: width, height, color, background, font-size, border, padding, margin, display etc.
@@ -33,8 +32,7 @@ CSS:
 - [X] !Bonus point! pentru generarea conținutului folosind :after, :before (dar să aibă sens; fiți creativi)
     - Call to actionul de la inceputul paginii
      
-Javascript:
-
+### Javascript:
 - [X] Fișier separat pentru codul JavaScript
 - [X] Modificarea stilului unui element sau al unui grup de elemente
     - Realizat in cadrul efectului de raspuns din quizuri
@@ -56,7 +54,7 @@ Javascript:
       - Folosit pentru a prelua variable CSS din Javascript in cadrul quiz
 - [ ] Validarea datelor dintr-un formular folosind expresii regulate
 
-B. AJAX
+### AJAX
 - [X] Cereri Ajax cu preluare date dintr-un fișier json
 - [X] Sesiuni: e.g. login/logout (folosind Storage / fișier json)
       - Oarecum, prin salvarea scorurilor de pe quizuri
