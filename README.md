@@ -51,13 +51,13 @@ On the final section of the article, there is a small gravity simulation game wh
 - [ ] Schimbarea aleatoare a valorilor unei proprietăți (de exemplu: culoare, dimensiuni, poziție)
 - [X] Folosirea proprietăților classList, target sau currentTarget
 - [X] Folosirea metodelor getComputedStyle, stopPropagation
-      - Folosit pentru a prelua variable CSS din Javascript in cadrul quiz
+    - Folosit pentru a prelua variable CSS din Javascript in cadrul quiz
 - [ ] Validarea datelor dintr-un formular folosind expresii regulate
 
 ### AJAX
 - [X] Cereri Ajax cu preluare date dintr-un fișier json
 - [X] Sesiuni: e.g. login/logout (folosind Storage / fișier json)
-      - Oarecum, prin salvarea scorurilor de pe quizuri
+    - Oarecum, prin salvarea scorurilor de pe quizuri
 
 
 P.S: Thank you for the book, I really appreciate it! 😊
