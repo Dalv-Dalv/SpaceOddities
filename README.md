@@ -35,4 +35,31 @@ CSS:
      
 Javascript:
 
+- [X] Fișier separat pentru codul JavaScript
+- [X] Modificarea stilului unui element sau al unui grup de elemente
+    - Realizat in cadrul efectului de raspuns din quizuri
+- [X] Manipularea DOM-ului (selectare după id, tag, clasă, folosind selectori CSS)
+- [X] Crearea și stergerea de elemente HTML
+    - Crearea intrebarilor in quizuri
+- [X] Folosirea și modificarea evenimentelor generate de mouse si tastatură
+    - Simulatorul de gravitatie
+- [X] Modificare de proprietăți
+- [X] Inputuri funcționale (de exemplu: input de tip text/range/number/radio/checkbox, select, textarea)
+- [X] Folosirea setTimeout sau setInterval
+- [X] Folosirea localStorage (să se pastreze în localStorage o colecție de elemente)
+    - Folosit pentru a stoca scorul din quizuri
+- [X] Folosirea a cel puțin unei metode din clasele: Math, Array, String, Date
+    - Folosit pentru a randomiza ordinea intrebarilor din quizuri
+- [ ] Schimbarea aleatoare a valorilor unei proprietăți (de exemplu: culoare, dimensiuni, poziție)
+- [X] Folosirea proprietăților classList, target sau currentTarget
+- [X] Folosirea metodelor getComputedStyle, stopPropagation
+      - Folosit pentru a prelua variable CSS din Javascript in cadrul quiz
+- [ ] Validarea datelor dintr-un formular folosind expresii regulate
+
+B. AJAX
+- [X] Cereri Ajax cu preluare date dintr-un fișier json
+- [X] Sesiuni: e.g. login/logout (folosind Storage / fișier json)
+      - Oarecum, prin salvarea scorurilor de pe quizuri
+
+
 P.S: Thank you for the book, I really appreciate it! 😊
