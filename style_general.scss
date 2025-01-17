@@ -247,7 +247,7 @@ h2 {
         right: $size;
         border-radius: 1000px;
     
-        $percentage: 50%;
+        $percentage: 0%;
         background: linear-gradient(to right, rgba($bgColor, 0.1) (var(--percentage) - 10%), rgba($bgColor, 0.7) var(--percentage), rgba($bgColor, 0.7) var(--percentage));
         border: 3px solid $bgColor;
     }
