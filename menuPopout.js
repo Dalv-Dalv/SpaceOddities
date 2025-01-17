@@ -6,7 +6,6 @@ function main() {
     const triggerOffset = triggerSection.offsetTop;
 
     window.addEventListener('scroll', () => {
-        console.log(window.scrollY, window.innerHeight, triggerOffset);
         if (window.scrollY > triggerOffset + 200) {
             panel.classList.add('visible');
         } else {

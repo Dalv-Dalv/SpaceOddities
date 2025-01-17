@@ -26,4 +26,4 @@ CSS:
 - [ ]
 - [ ] 
 
-P.S: Thank you for the book, I really appreciate it 😊
+P.S: Thank you for the book, I really appreciate it! 😊

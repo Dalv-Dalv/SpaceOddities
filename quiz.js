@@ -3,7 +3,7 @@ const quizzType = urlParams.get('quiz');
 let quizData;
 getQuizData();
 function getQuizData() {
-    const url = "quizzes/" + quizzType + ".json";
+    const url = "Quizzes/" + quizzType + ".json";
 
     fetch(url)
         .then((response) => {
