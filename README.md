@@ -53,6 +53,7 @@ Javascript:
 - [ ] Schimbarea aleatoare a valorilor unei proprietăți (de exemplu: culoare, dimensiuni, poziție)
 - [X] Folosirea proprietăților classList, target sau currentTarget
 - [X] Folosirea metodelor getComputedStyle, stopPropagation
+  - 
 - [ ] Validarea datelor dintr-un formular folosind expresii regulate
 
 B. AJAX
