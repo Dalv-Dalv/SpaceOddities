@@ -12,4 +12,18 @@ On the final section of the article, there is a small gravity simulation game wh
 
 Requirements and implementations:
 Cerinte HTML/CSS:
+- WORK IN PROGRESS
 - [X] Fisiere separate pentru HTML si CSS
+- [X] Conținutul site-ului trebuie să aibă sens (nu îl umpleți cu Lorem ipsum)
+- [X] Nu este acceptată folosirea de frameworkuri și biblioteci
+HTML:
+- [ ] Trecerea testelor de validare HTML http://validator.w3.org/
+- [X] Folosirea tagurilor semantice prezentate la curs/laborator
+CSS:
+- [X] Trecerea testelor de validare CSS https://jigsaw.w3.org/css-validator/
+- [X] Site-ul trebuie să fie responsive (media query, unități relative, tipuri de display)
+- [ ]
+- [ ]
+- [ ] 
+
+P.S: Thank you for the book, I really appreciate it 😊
