@@ -332,6 +332,10 @@ h2 {
         background: rgba($bgColor, 0.9);
         border: 3px solid $bgColor;
     }   
+
+    @media (max-width: $breakpoint-tablet) {
+        margin: 10vh 10vw;
+    }
 }
 .gameButton:hover{
     transform: scale(1.1);
@@ -342,4 +346,8 @@ h2 {
 .thankYou {
     margin-bottom: 2em;
     font-family: Poppins;
+
+    @media (max-width: $breakpoint-tablet) {
+        margin-bottom: 20vh;
+    }
 }

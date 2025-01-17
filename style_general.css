@@ -294,6 +294,11 @@ h2 {
   background: rgba(1, 0, 5, 0.9);
   border: 3px solid rgb(1, 0, 5);
 }
+@media (max-width: 1024px) {
+  .gameButton {
+    margin: 10vh 10vw;
+  }
+}
 
 .gameButton:hover {
   transform: scale(1.1);
@@ -304,4 +309,9 @@ h2 {
 .thankYou {
   margin-bottom: 2em;
   font-family: Poppins;
+}
+@media (max-width: 1024px) {
+  .thankYou {
+    margin-bottom: 20vh;
+  }
 }/*# sourceMappingURL=style_general.css.map */
