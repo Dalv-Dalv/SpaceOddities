@@ -12,4 +12,4 @@ On the final section of the article, there is a small gravity simulation game wh
 
 Requirements and implementations:
 Cerinte HTML/CSS:
-- Fisiere separate pentru HTML si CSS [X]
+- [X] Fisiere separate pentru HTML si CSS
