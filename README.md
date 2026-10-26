@@ -1,5 +1,7 @@
 # Space Oddities
-University of Bucharest | Web Course Project
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/eab7128c-cf30-48cd-8ac0-4e37f1e0dd21" />
+
 
 This website features a fully responsive design, it implements GLSL shaders as hero screens. The page is meant to read like an article to discover interesting things about space.
 
